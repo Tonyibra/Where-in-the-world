@@ -22,7 +22,7 @@
 }
 .dark_mode {
 	display: flex;
-	width: 17vh;
+	width: 19vh;
 	justify-content: space-between;
 	align-items: center;
 	height: 10vh;
@@ -406,11 +406,15 @@ a:active {
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	min-height: 100%;
 }
 .detail-wrapper {
 	width: 100%;
 	background-color: #fafafa;
+	height: 95vh;
+}
+.detail-Darkwrapper {
+	width: 100%;
+	background-color: #202c37;
 	height: 95vh;
 }
 .detail-container img {
@@ -444,6 +448,7 @@ a:active {
 	font-weight: 600 !important;
 	font-size: 16px;
 	margin: 0.7rem 0rem;
+	width: 85%;
 }
 .leftinfo-section h5 {
 	margin: 0.5rem 0rem;
@@ -460,9 +465,8 @@ a:active {
 
 /* footer */
 .footer {
-	width: 85%;
 	margin: 0;
-	height: 15vh;
+	/* height: 15vh; */
 
 	justify-content: center;
 	display: flex;
@@ -480,14 +484,59 @@ a:active {
 	margin: 0rem 0.2rem;
 	margin-bottom: 0.5rem;
 }
+.btn-wrapper {
+	width: 93%;
+	margin: auto;
+	flex-wrap: wrap;
+}
+.left-section {
+	background-color: #fafafa;
+}
+.left-Darksection {
+	background-color: rgb(32, 44, 55);
+	color: white;
+}
+
+.leftinfo-Darksection span {
+	color: white;
+}
+.rightinfo-Darksection span {
+	color: white;
+}
 
 .flex-wrapper {
 	display: flex;
 	flex-direction: column;
 	background-color: red;
 }
+
+.right-section {
+	width: 85%;
+	margin: auto;
+}
+.btn-Darkwrapper button {
+	display: flex;
+	align-items: center;
+	font-family: "Nunito Sans", sans-serif;
+	padding: 0.2rem 1.4rem;
+	background-color: #2b3945;
+	border-radius: 3px;
+	border: none;
+	box-shadow: 0px 0px 5px 0px rgb(128 128 128);
+	cursor: pointer;
+	margin: 1rem 0rem;
+	color: white;
+}
+.btn-Darkwrapper {
+	width: 93%;
+	margin: auto;
+	flex-wrap: wrap;
+}
 /* desktop */
 @media only screen and (min-width: 600px) {
+	.left-section {
+		background-color: #fafafa;
+	}
 	.cards-list {
 		display: flex;
 		flex-direction: row;
@@ -560,27 +609,79 @@ a:active {
 	.right-part {
 		width: 80vh;
 	}
-	.right-section {
-		width: 85%;
-		margin: auto;
-	}
+
 	.leftinfo-section h5 {
 		font-size: 16px !important;
 	}
 }
 .footer .header h3 {
 	width: 85%;
-	margin: auto;
+	margin: 1rem auto;
 }
 
+@media only screen and (min-width: 1250px) {
+	.leftinfo-section {
+		margin: 0rem 0rem !important;
+	}
+	.dark_mode {
+		width: 14vh;
+	}
+}
 @media only screen and (max-width: 1524px) {
 	.detail-container img {
 		object-fit: contain;
-		height: 400px;
+		height: 100%;
+	}
+	.dark_mode {
+		width: 14vh;
+	}
+	.leftinfo-section,
+	.rightinfo-section {
+		margin: 0.7rem 2.5rem;
+		padding: 0.4rem 0rem;
+	}
+	.leftinfo-section .country_name,
+	.rightinfo-section h5 {
+		font-size: 16px !important;
+	}
+	h5 {
+		font-size: 16px !important;
+	}
+	.leftinfo-Darksection {
+		margin: 0.7rem 2.5rem;
+		padding: 0.4rem 0rem;
+	}
+	.rightinfo-Darksection {
+		margin: 0.7rem 2.5rem;
+	}
+	.rightinfo-Darksection h5 {
+		font-size: 16px;
+		margin: 0.7rem 0rem;
+	}
+	.leftinfo-Darksection h5 {
+		font-size: 16px;
+		margin: 0.7rem 0rem;
+	}
+	.leftinfo-Darksection h5 {
+		font-size: 16px;
+	}
+	.leftinfo-Darksection h5 {
+		margin: 0.5rem 0rem;
+	}
+	.rightinfo-Darksection span {
+		font-size: 16px;
+		font-weight: 300 !important;
+	}
+	.leftinfo-Darksection span {
+		font-size: 16px;
+		font-weight: 300 !important;
+	}
+	.dark_mode {
+		width: 19vh;
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1250px) {
 	/* Detail page  */
 	.detail-container img {
 		width: 500px;
@@ -590,6 +691,11 @@ a:active {
 	.detail-container {
 		display: flex;
 		flex-direction: column;
+		width: 90%;
+		margin: auto;
+	}
+	.btn-wrapper {
+		margin: 0;
 	}
 	.info-wrapper {
 		display: flex;
@@ -599,21 +705,71 @@ a:active {
 	}
 	.flex-container {
 		display: flex;
-		justify-content: space-between;
-		width: 70%;
+
+		width: 55%;
 	}
 	.country_name h2 {
 		margin-top: 0rem;
 		margin-bottom: 2rem;
 	}
 	.rightinfo-section {
-		padding: 3rem;
+		padding: 3rem 0rem;
 		margin-top: 1.5rem;
+		width: 30vh;
+	}
+
+	.rightinfo-Darksection {
+		padding: 3rem 0rem;
+		margin-top: 1.5rem;
+		width: 30vh;
 	}
 	.btn-wrapper {
 		flex-wrap: nowrap;
+		margin: auto;
 	}
 	.leftinfo-section {
+		margin: 0.7rem 3rem !important;
+		width: 35vh;
+	}
+	.leftinfo-Darksection {
 		margin: 0.7rem 3rem;
+		width: 35vh;
+	}
+	.rightinfo-Darksection h5 {
+		font-size: 16px;
+		margin: 0.7rem 0rem;
+	}
+	.leftinfo-Darksection h5 {
+		font-size: 16px;
+	}
+	.leftinfo-Darksection h5 {
+		margin: 0.5rem 0rem;
+	}
+	.rightinfo-Darksection span {
+		font-size: 16px;
+		font-weight: 300 !important;
+	}
+	.leftinfo-Darksection span {
+		font-size: 16px;
+		font-weight: 300 !important;
+	}
+	.right-section {
+		width: 100%;
+		margin: 0;
+	}
+	.dark_mode {
+		width: 14vh;
+	}
+	.footer .header h3 {
+		width: 71%;
+		margin: 1rem auto;
+	}
+	.btn-wrapper {
+		flex-wrap: nowrap;
+		margin: auto;
+		width: 85%;
+	}
+	.leftinfo-section {
+		padding: 0rem;
 	}
 }

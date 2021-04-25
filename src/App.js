@@ -5,12 +5,7 @@ import MainSection from "./pages/MainSection";
 import { fetchRegions } from "./redux/RegionActions";
 import { useDispatch } from "react-redux";
 import DetailPage from "./pages/DetailPage";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -42,7 +37,9 @@ function App() {
 							setLoading={setLoading}
 						/>
 					</Route>
-					<Route path="/:id" component={DetailPage} exact />
+					<Route path="/:id" exact>
+						<DetailPage isActive={isActive} />
+					</Route>
 				</Switch>
 			</div>
 		</Router>

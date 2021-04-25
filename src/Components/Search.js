@@ -7,7 +7,7 @@ import { fetchSearch } from "../redux/RegionActions";
 const Search = ({ isActive, dropDown, setDropDown }) => {
 	const dispatch = useDispatch();
 	const [search, setSearch] = useState("");
-	const [loading, setLoading] = useState(false);
+	// const [loading, setLoading] = useState(false);
 
 	const inputHandler = (e) => {
 		setSearch(e.target.value);
@@ -16,12 +16,8 @@ const Search = ({ isActive, dropDown, setDropDown }) => {
 	const searchHandler = (e) => {
 		e.preventDefault();
 		try {
-			setLoading(true);
 			dispatch(fetchSearch(search));
-			setLoading(false);
-		} catch (error) {
-			setLoading(true);
-		}
+		} catch (error) {}
 
 		setSearch("");
 	};

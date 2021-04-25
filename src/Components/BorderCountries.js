@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 const BorderCountries = () => {
 	const { details } = useSelector((state) => state.RegionReducer);

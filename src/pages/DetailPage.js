@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
 import { useLocation, useHistory } from "react-router-dom";
 import { fetchDetails } from "../redux/RegionActions";
-import { Button, CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@material-ui/core";
 import numeral from "numeral";
 import BorderCountries from "../Components/BorderCountries";
 
-const DetailPage = () => {
+const DetailPage = ({ isActive }) => {
 	const dispatch = useDispatch();
 	const location = useLocation();
 	const history = useHistory();
@@ -30,10 +30,10 @@ const DetailPage = () => {
 	const { details } = useSelector((state) => state.RegionReducer);
 
 	return (
-		<div className="detail-wrapper">
+		<div className={isActive ? "detail-wrapper" : "detail-Darkwrapper"}>
 			<div className="detail-container">
 				<div className="top-section">
-					<div className="btn-wrapper">
+					<div className={isActive ? "btn-wrapper" : "btn-Darkwrapper"}>
 						<button onClick={goBackHandler}>
 							<KeyboardBackspaceIcon className="arrow_btn" />
 							<span>Back</span>
@@ -46,9 +46,13 @@ const DetailPage = () => {
 						<div className="right-section">
 							<img src={details.data[0].flag} alt="flag" />
 						</div>
-						<div className="left-section">
+						<div className={isActive ? "left-section" : "left-Darksection "}>
 							<div className="info-wrapper">
-								<div className="leftinfo-section">
+								<div
+									className={
+										isActive ? "leftinfo-section" : "leftinfo-Darksection"
+									}
+								>
 									<div className="country_name">
 										<h2>{details.data[0].name}</h2>
 									</div>
@@ -72,7 +76,13 @@ const DetailPage = () => {
 									</h5>
 								</div>
 
-								<div className="rightinfo-section active">
+								<div
+									className={
+										isActive
+											? "rightinfo-section active"
+											: "rightinfo-Darksection "
+									}
+								>
 									<h5>
 										Top Level Domain:
 										<span> {details.data[0].topLevelDomain}</span>
@@ -93,7 +103,7 @@ const DetailPage = () => {
 								<div className="header">
 									<h3>Border Countries:</h3>
 								</div>
-								<div className="btn-wrapper">
+								<div className={"btn-wrapper"}>
 									<BorderCountries />
 								</div>
 							</div>
